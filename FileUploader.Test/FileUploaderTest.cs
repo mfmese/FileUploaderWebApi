@@ -25,13 +25,7 @@ namespace FileUploader.Test
 
             _fileUploadPort = new Mock<IFileUploadPort>();
         }
-
-        [Test]
-        public void Test1()
-        {
-            Assert.Pass();
-        }
-
+ 
         [Test]
         public async Task ToUploadFile_ShouldCreateFile_WhenFileValidated()
         {
@@ -79,7 +73,7 @@ namespace FileUploader.Test
             };
 
             var fileUploadResponse = new FileUploadResponse();
-            fileUploadResponse.Data.IsFileUploaded = true;
+            fileUploadResponse.Data.IsFileUploaded = false;
 
             _fileUploadPort.Setup(x => x.CreateFileAsync(It.IsAny<FileUploader.Domain.Models.FileInfo>())).ReturnsAsync(fileUploadResponse);
             var fileUploadHandler = new FileUploadHandler(TestUtility.GetIConfigurationRoot(), _fileUploadPort.Object);
