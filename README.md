@@ -19,6 +19,8 @@ Webapi also currently run by using http://localhost:3000 url. This is important 
 ##### (6) type PM> update-database
 ##### (7) click enter, you will see new created tables which are FileInfos table and ApplicationLogs table
 #### After you setup your database, you can run the application and test GetAllFiles and UploadFile endpoints by using swagger
+#### Now you can go to https://github.com/mfmese/FileUploaderAngular link and run angular for ui development
+
 ## Test Cases (2 test case created)
 #### Not: TestUtility class created for getting appsettings configuraition. Database connection also mocked in order not to connect.
 ##### (1) ToUploadFile_ShouldCreateFile_WhenFileValidated (for positive scenario)
